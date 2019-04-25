@@ -1,0 +1,91 @@
+/* 通用样式 */
+ul,li,div,input{
+	margin:0;
+	padding:0;
+}
+ul{
+	list-style: none;
+}
+li{
+	position: relative;
+}
+.fl{
+	float: left;
+}
+.clearfix:before,
+.clearfix:after{
+	display: table;
+	content: '';
+	line-height: 0;
+}
+.clearfix:after{
+	clear: both;
+}
+
+
+/* 针对select组件 */
+.select-wrapper{
+	position: relative;
+}
+.down-select{
+	width:286px;
+	height:32px;
+	padding: 3px;
+	border:1px solid #08d5be;
+	border-radius: 3px;
+	outline: 0;
+	line-height: 32px;
+	font-size: 14px;
+	color:#36364d;
+}
+.s-arrow{
+	position: absolute;
+	left:315px;
+	top:15px;
+	display: inline-block;
+	width:8px;
+	height:8px;
+	border-bottom:2px solid #E0E0E0;
+	border-right:2px solid #E0E0E0;
+	transform: rotate(45deg);
+	transition:all .2s ease;
+}
+.s-turn-arrow{
+	transform: rotate(-135deg);
+}
+.select-con{
+	display: none;
+	position: absolute;
+	top:45px;
+	left:50px;
+	border:1px solid #dcdcdc;
+}
+.s-con-u-item{
+	min-width: 100px;
+	height:260px;
+	border-right:1px solid #dcdcdc;
+}
+.s-con-u-item:last-child{
+	border-right:0;
+}
+.select-con li{
+	padding:5px 30px 5px 5px;
+	cursor: pointer;
+}
+.sl-active{
+	font-weight: bold;
+	color:#36364d;
+	background-color: #EDF0F5;
+}
+.more:after{
+	position: absolute;
+	right:10px;
+	top:13px;
+	display: inline-block;
+	content:'';
+	width:5px;
+	height:5px;
+	border-top:1px solid #91959c;
+	border-right:1px solid #91959c;
+	transform: rotate(45deg);
+}

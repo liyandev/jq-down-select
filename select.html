@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>select</title>
+	<link rel="stylesheet" href="./select.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="select-wrapper">
+			<span>分类：</span>
+			<input id="ld-type" class="down-select" type="text">
+			<i id="s-arrow" class="s-arrow"></i>
+			<input id="ld-value" type="hidden">
+			<div id="select-con" class="select-con clearfix">
+				<ul id="first-type" class="s-con-u-item fl">
+					<li class="sl-active more">公园绿地</li>
+					<li>防护</li>			
+				</ul>
+				<ul id="sec-type" class="s-con-u-item fl">
+									
+				</ul>
+				<ul id="third-type" class="s-con-u-item fl">
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+	<script src="./typelist.js"></script>
+	<script src="./typeSelect.js"></script>
+	<script>
+		var option = {
+			data:typelist,
+			wrapper:'#select-con',
+			ulf:'#first-type',
+			uls:'#sec-type',
+			ult:'#third-type',
+			showInput:'#ld-type',
+			hideInput:'#ld-value'
+		};
+		$('.select-wrapper').typeselect(option);
+	</script>
+</body>
+</html>
